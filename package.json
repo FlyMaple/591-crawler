@@ -1,0 +1,25 @@
+{
+  "name": "591-crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlyMaple/591-crawler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlyMaple/591-crawler/issues"
+  },
+  "homepage": "https://github.com/FlyMaple/591-crawler#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "eventproxy": "^0.3.5",
+    "nodemailer": "^2.7.0",
+    "request": "^2.79.0"
+  }
+}

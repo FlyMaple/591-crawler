@@ -1,0 +1,10 @@
+{
+    "region": "4",
+    "count": "4,328",
+    "recom": "",
+    "main": "",
+    "page": "<a class='pagePrev first'><span>上一頁</span></a><span class='pageCurrent'> 1 </span><a class='pageNum-form' href='javascript:;'  data-first='20' data-total='4328' > 2 </a><a class='pageNum-form' h\r\nref='javascript:;'  data-first='40' data-total='4328' > 3 </a><a class='pageNum-form' href='javascript:;'  data-first='60' data-total='4328' > 4 </a><a class='pageNum-form' href='javascript:;'  dat\r\na-first='80' data-total='4328' > 5 </a><a class='pageNum-form' href='javascript:;'  data-first='100' data-total='4328' > 6 </a><span class='pageBreak'>...</span><a class='pageNum-form' href='javasc\r\nript:;'  data-first='4320' data-total='4328' > 217 </a><a href='javascript:;' data-first='20' data-total='4328'  class='pageNext'><span>下一頁</span></a><span class='TotalRecord'>&nbsp;&nbsp;共 <sp\r\nan class='R'>4328 </span>筆</span>",
+    "left": "不重要",
+    "broker": "沒東西",
+    "community": "沒東西"
+}
