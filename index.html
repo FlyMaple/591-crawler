@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <title>Document</title>
+</head>
+
+<body ng-app="House">
+    <div class="container" ng-controller="masterCtrl">
+        <div class="row">
+            <div class="filter price">價錢</div>
+            <div class="filter price">地址</div>
+            <div class="filter price">車位</div>
+            <div class="filter price">權狀</div>
+            <div class="filter price">主建</div>
+        </div>
+        <div class="row house_list">
+            <div class="col-xs-12 house" ng-repeat="house in house_list track by house.houseid">
+                <span class="done glyphicon glyphicon-ok" aria-hidden="true"></span>
+                <span class="sclose glyphicon glyphicon-remove" aria-hidden="true"></span>
+                <a ng-href="{{'https://sale.591.com.tw/home/house/detail/2/'+house.houseid+'.html'}}" target="_blank">
+                    <div class="img col-xs-3">
+                        <img ng-src="{{house.photo_url}}" alt="">
+                    </div>
+                    <div class="col-xs-9">
+                        <div class="info title">
+                            <span class="label">標題</span>
+                            <span class="text">{{house.title}}</span>
+                        </div>
+                        <div class="info sub-title">
+                            <span class="label">副標</span>
+                            <div class="room">
+                                <span class="text">{{house.room}}</span>
+                            </div>
+                            <div class="sp"> | </div>
+                            <div class="carport">
+                                <span class="text">{{house.has_carport ? '有' : '無'}}車位</span>
+                            </div>
+                            <div class="sp"> | </div>
+                            <div class="floor">
+                                <span class="text">{{house.floor}}</span>
+                            </div>
+                            <div class="sp"> | </div>
+                            <div class="area">
+                                <span class="label"></span>
+                                <span class="text">權狀{{house.area}}坪</span>
+                            </div>
+                            <div class="sp"> | </div>
+                            <div class="mainarea">
+                                <span class="text">主建{{house.mainarea}}坪</span>
+                            </div>
+                        </div>
+                        <div class="info nick_name">
+                            <span class="label">聯絡</span>
+                            <span class="text">{{house.nick_name}}</span>
+                        </div>
+                        <div class="info houseage">
+                            <span class="label">屋齡</span>
+                            <span class="text">{{house.houseage}}年</span>
+                        </div>
+                        <div class="info address">
+                            <span class="label">地址</span>
+                            <span class="text">{{house.address}}</span>
+                        </div>
+                        <div class="info price">
+                            <span class="label">總價</span>
+                            <span class="text">
+                                {{house.showprice}}萬
+                                <span class="sp">,&nbsp;&nbsp;&nbsp;</span>
+                                <span class="unitprice">
+                                    <span class="text">{{house.unitprice}}萬/坪</span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

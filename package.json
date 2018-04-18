@@ -2,8 +2,11 @@
   "name": "591-crawler",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
+    "start": "\"npm run lite\"",
+    "compass": "compass watch",
+    "lite": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +21,10 @@
   "homepage": "https://github.com/FlyMaple/591-crawler#readme",
   "dependencies": {
     "cheerio": "^0.22.0",
+    "cors": "^2.8.4",
     "eventproxy": "^0.3.5",
+    "express": "^4.16.3",
+    "lite-server": "^2.3.0",
     "nodemailer": "^2.7.0",
     "request": "^2.79.0"
   }

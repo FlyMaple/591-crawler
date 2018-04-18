@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 1140px;
+  padding: 15px 0;
+}
+
+.filter {
+  display: inline-block;
+  background-color: #3F51B5;
+  padding: 7px 15px;
+  border: 2px solid #283684;
+  border-radius: 2px;
+  color: #9E9E9E;
+  font-size: 1.5em;
+}
+.filter:not(:last-child) {
+  margin-right: 10px;
+}
+
+.house_list {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.house_list .house {
+  position: relative;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  font-size: 1.2em;
+}
+.house_list .house:hover {
+  background-color: #ffd9a1;
+}
+.house_list .house a, .house_list .house a:hover {
+  color: inherit;
+}
+.house_list .house .done, .house_list .house .sclose {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 99;
+}
+.house_list .house .done:hover, .house_list .house .sclose:hover {
+  color: red;
+}
+.house_list .house .done {
+  right: 45px;
+}
+.house_list .house .info:not(:last-child) {
+  margin-bottom: 10px;
+}
+.house_list .house .label {
+  color: #3F51B5;
+  font-size: 1.2em;
+}
+.house_list .house .sub-title {
+  font-size: 1em;
+}
+.house_list .house .sub-title > div {
+  display: inline-block;
+}
+.house_list .house .price {
+  color: red;
+}
+.house_list .house .unitprice {
+  color: green;
+}
+.house_list .house .sp {
+  font-weight: 600;
+}
