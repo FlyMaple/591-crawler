@@ -25,16 +25,17 @@
 <body ng-app="House">
     <div class="container" ng-controller="masterCtrl">
         <div class="row">
-            <div class="filter price">價錢</div>
-            <div class="filter price">地址</div>
-            <div class="filter price">車位</div>
-            <div class="filter price">權狀</div>
-            <div class="filter price">主建</div>
+            <div class="object-total">總筆數: {{house_list.length}}</div>
+            <div class="filter price" ng-click="sort('price')">價錢</div>
+            <div class="filter address" ng-click="sort('address')">地址</div>
+            <div class="filter carport" ng-click="sort('has_carport')">車位</div>
+            <div class="filter area" ng-click="sort('area')">權狀</div>
+            <div class="filter mainarea" ng-click="sort('mainarea')">主建</div>
         </div>
         <div class="row house_list">
-            <div class="col-xs-12 house" ng-repeat="house in house_list track by house.houseid">
-                <span class="done glyphicon glyphicon-ok" aria-hidden="true"></span>
-                <span class="sclose glyphicon glyphicon-remove" aria-hidden="true"></span>
+            <div class="col-xs-12 house {{house.status}}" ng-if="house.status!=='not_show'" ng-repeat="house in house_list track by house.houseid">
+                <span class="done glyphicon glyphicon-ok" aria-hidden="true" ng-click="done(house)"></span>
+                <span class="sclose glyphicon glyphicon-remove" aria-hidden="true" ng-click="not_show(house)"></span>
                 <a ng-href="{{'https://sale.591.com.tw/home/house/detail/2/'+house.houseid+'.html'}}" target="_blank">
                     <div class="img col-xs-3">
                         <img ng-src="{{house.photo_url}}" alt="">

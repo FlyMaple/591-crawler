@@ -27,5 +27,8 @@
     "lite-server": "^2.3.0",
     "nodemailer": "^2.7.0",
     "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.2"
   }
 }

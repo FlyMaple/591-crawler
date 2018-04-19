@@ -16,6 +16,12 @@ img {
     padding: 15px 0;
 }
 
+.object-total {
+    display: inline-block;
+    padding: 7px 15px;
+    font-size: 1.5em;
+}
+
 .filter {
     display: inline-block;
     background-color: #3F51B5;
@@ -24,8 +30,12 @@ img {
     border-radius: 2px;
     color: #9E9E9E;
     font-size: 1.5em;
+    cursor: pointer;
     &:not(:last-child) {
         margin-right: 10px;
+    }
+    &:hover {
+        color: gold;
     }
 }
 
@@ -45,6 +55,10 @@ img {
 
         &:hover {
             background-color: #ffd9a1;
+        }
+
+        &.done {
+            background-color: #c6fcc9;
         }
 
         a, a:hover {

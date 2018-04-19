@@ -13,6 +13,12 @@ img {
   padding: 15px 0;
 }
 
+.object-total {
+  display: inline-block;
+  padding: 7px 15px;
+  font-size: 1.5em;
+}
+
 .filter {
   display: inline-block;
   background-color: #3F51B5;
@@ -21,9 +27,13 @@ img {
   border-radius: 2px;
   color: #9E9E9E;
   font-size: 1.5em;
+  cursor: pointer;
 }
 .filter:not(:last-child) {
   margin-right: 10px;
+}
+.filter:hover {
+  color: gold;
 }
 
 .house_list {
@@ -40,6 +50,9 @@ img {
 }
 .house_list .house:hover {
   background-color: #ffd9a1;
+}
+.house_list .house.done {
+  background-color: #c6fcc9;
 }
 .house_list .house a, .house_list .house a:hover {
   color: inherit;
