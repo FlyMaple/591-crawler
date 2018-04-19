@@ -92,34 +92,41 @@ function filterHouseList(house_list) {
 }
 
 async function run() {
-    await getTotalPage();
-    console.log(`Rows: ${total_rows}`);
-    console.log(`Pages: ${total_page}`);
+    return new Promise(async function (resolve, reject) {
+        await getTotalPage();
+        console.log(`Rows: ${total_rows}`);
+        console.log(`Pages: ${total_page}`);
 
-    const house_list = await getHouseList();
-    const house_list_filter = filterHouseList(house_list);
+        const house_list = await getHouseList();
+        const house_list_filter = filterHouseList(house_list);
 
-    console.log(JSON.stringify(house_list_filter, null, 4));
-    // house_list_filter.forEach(function (house) {
-    //     const { houseid, kind_name, shape_name, title, has_carport, room, floor, mainarea, photo_url, nick_name, area, houseage, address, unitprice, price } = house;
+        resolve(house_list_filter);
+        // console.log(JSON.stringify(house_list_filter, null, 4));
+        // house_list_filter.forEach(function (house) {
+        //     const { houseid, kind_name, shape_name, title, has_carport, room, floor, mainarea, photo_url, nick_name, area, houseage, address, unitprice, price } = house;
 
-    //     console.log(`房屋編號: ${houseid}`);
-    //     console.log(`住宅類型: ${kind_name}`);
-    //     console.log(`房屋類型: ${shape_name}`);
-    //     console.log(`標題: ${title}`);
-    //     console.log(`車位: ${has_carport ? '有' : '無'}`);
-    //     console.log(`格局: ${room}`);
-    //     console.log(`樓層: ${floor}`);
-    //     console.log(`主建物: ${mainarea}`);
-    //     console.log(`圖片: ${photo_url}`);
-    //     console.log(`聯絡: ${nick_name}`);
-    //     console.log(`總坪數: ${area}`);
-    //     console.log(`屋齡: ${houseage}`);
-    //     console.log(`地址: ${address}`);
-    //     console.log(`單坪價: ${unitprice}`);
-    //     console.log(`總價: ${price}`);
-    //     console.log(`================================`);
-    // });
+        //     console.log(`房屋編號: ${houseid}`);
+        //     console.log(`住宅類型: ${kind_name}`);
+        //     console.log(`房屋類型: ${shape_name}`);
+        //     console.log(`標題: ${title}`);
+        //     console.log(`車位: ${has_carport ? '有' : '無'}`);
+        //     console.log(`格局: ${room}`);
+        //     console.log(`樓層: ${floor}`);
+        //     console.log(`主建物: ${mainarea}`);
+        //     console.log(`圖片: ${photo_url}`);
+        //     console.log(`聯絡: ${nick_name}`);
+        //     console.log(`總坪數: ${area}`);
+        //     console.log(`屋齡: ${houseage}`);
+        //     console.log(`地址: ${address}`);
+        //     console.log(`單坪價: ${unitprice}`);
+        //     console.log(`總價: ${price}`);
+        //     console.log(`================================`);
+        // });
+    });
 }
 
-run();
+// run();
+
+module.exports = {
+    run,
+};
