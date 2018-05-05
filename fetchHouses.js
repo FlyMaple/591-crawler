@@ -4,7 +4,7 @@ let step_row = 30;
 let total_rows;
 let total_page;
 
-let ignore_titles = ['套房'];
+let ignore_titles = ['套房', '金凡斯'];
 let ignore_addresses = ['明湖', '武陵路', '成德路', '高峰路', '富群街', '中華路三段', '振興路', '中山路640巷', '田美三街', '柴橋路', '寶新路', '光華二街', '林森路'];
 let max_house_age = 25;
 

@@ -31,6 +31,7 @@
             <div class="filter carport" ng-click="sort('has_carport')">車位</div>
             <div class="filter area" ng-click="sort('area')">權狀</div>
             <div class="filter mainarea" ng-click="sort('mainarea')">主建</div>
+            <div class="filter houseage" ng-click="sort('houseage')">屋齡</div>
         </div>
         <div class="row house_list">
             <div class="col-xs-12 house {{house.status}}" ng-if="house.status!=='not_show'" ng-repeat="house in house_list track by house.houseid">
